@@ -1,0 +1,43 @@
+<!-- <div class="container clearfix">
+  <h2 class="text-muted">Rules:-</h2>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item list-group-item-dark">The game has 2 players, playing in rounds.</li>
+    <li class="list-group-item list-group-item-dark">In each turn, a player rolls a dice as many times as he whishes. Each result get added
+      to his ROUND score</li>
+    <li class="list-group-item list-group-item-dark">BUT, if the player rolls a 1, all his ROUND score gets lost. After that, it's the next
+      player's turn</li>
+    <li class="list-group-item list-group-item-dark">The player can choose to 'Hold', which means that his ROUND score gets added to his
+      GLBAL score. After that, it's
+      the next player's turn</li>
+    <li class="list-group-item list-group-item-dark">The first player to reach 50 points on GLOBAL score wins the game</li>
+  </ul>
+</div> -->
+<div class="wrapper clearfix">
+  <div class="player-0-panel active">
+    <div class="player-name" id="name-0">Player 1</div>
+    <div class="player-score" id="score-0">{{scores[0]}}</div>
+    <div class="player-current-box">
+      <div class="player-current-label">Current</div>
+      <div class="player-current-score" #currentZero id="current-0">{{roundScore_0}}</div>
+    </div>
+  </div>
+
+  <div class="player-1-panel">
+    <div class="player-name" id="name-1">Player 2</div>
+    <div class="player-score" id="score-1">{{scores[1]}}</div>
+    <div class="player-current-box">
+      <div class="player-current-label">Current</div>
+      <div class="player-current-score" id="current-1">{{roundScore_1}}</div>
+    </div>
+  </div>
+
+  <button class="btn-new" (click)="initGame()"><i class="mdi mdi-plus-box"></i>New game</button>
+  <button class="btn-roll" (click)="rollDice()"><i class="mdi mdi-rotate-3d-variant mdi-spin"></i>Roll dice</button>
+  <button class="btn-hold" (click)="holdGame()"><i class="mdi mdi-gesture-tap-hold"></i>Hold</button>
+
+  <!-- <input type="text" placeholder="Final score" class="final-score" name="finalScore" [(ngModel)]="finalScore" #finalScore='ngModel'> -->
+
+  <img src="{{diceSrc}}" alt="Dice" class="dice" id="dice-1">
+  <!-- <img src="/assets/images/dice-5.png" alt="Dice" class="dice" id="dice-2"> -->
+</div>
+
